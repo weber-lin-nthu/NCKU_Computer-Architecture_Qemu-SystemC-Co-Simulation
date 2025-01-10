@@ -27,6 +27,8 @@
 
 using namespace std;
 
+#define CASLAB_SYSBRG_DEBUG // 新增此行
+
 #ifdef CASLAB_SYSBRG_DEBUG
 #define DB_PRINT(...)					\
 	do									\

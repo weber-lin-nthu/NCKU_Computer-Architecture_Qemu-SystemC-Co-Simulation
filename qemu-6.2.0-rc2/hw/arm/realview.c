@@ -189,7 +189,7 @@ static void realview_init(MachineState *machine,
     for (n = 0; n < 64; n++) {
         pic[n] = qdev_get_gpio_in(dev, n);
     }
-    sysbus_create_simple("caslab_calc", 0x80000000, pic[30]); // 新增此行
+    sysbus_create_simple("caslab_sysbridge", 0x80000000, pic[30]); // 新增此行
 
     pl041 = qdev_new("pl041");
     qdev_prop_set_uint32(pl041, "nc_fifo_depth", 512);
