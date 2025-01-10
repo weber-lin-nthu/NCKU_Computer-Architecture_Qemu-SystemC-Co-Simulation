@@ -1,0 +1,11 @@
+#! /bin/sh
+echo "Root file system mounted successfully, now running /etc/init.d/rcS..."
+echo "Mounting proc filesystem..."
+mount -t proc proc /proc
+mkdir -p /dev/pts
+mount -t devpts devpts /dev/pts
+#mkdir -p /sys/class
+echo "Mounting sys filesystem..."
+mount -t sysfs none /sys
+echo "Generating device files..."
+mdev -s

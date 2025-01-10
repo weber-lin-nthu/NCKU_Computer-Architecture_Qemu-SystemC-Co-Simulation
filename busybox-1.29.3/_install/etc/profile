@@ -1,0 +1,9 @@
+echo "Set search library path in /etc/profile"
+export LD_LIBRARY_PATH=/lib:/usr/lib
+echo "Set user path in /etc/profile"
+PATH=/bin:/sbin:/usr/bin:/usr/sbin
+export PATH
+if ! [ -e /home ]; then
+  mkdir /home
+fi
+cd /home
