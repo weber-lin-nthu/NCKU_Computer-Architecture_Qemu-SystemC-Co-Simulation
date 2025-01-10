@@ -164,3 +164,9 @@
 	interrupt-parent = <&intc>;
 	interrupts = <0 23 IRQ_TYPE_LEVEL_HIGH>;
 };
+
+// 新增以下：
+&cascalc{
+    interrupt-parent = <&intc>;
+    interrupts = <0 30 IRQ_TYPE_LEVEL_HIGH>;
+};
